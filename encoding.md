@@ -20,16 +20,18 @@ This defines the most surface-level information about the score. It is efficient
 In order to support more complex tasks such as hiding staves for certain measures, adding more instruments, etc. this encoding system uses a **measure-by-measure** approach. To maintain ease of visibility, each measure gets its own section:
 
 ```
-M1
+M1:4/4
   P1.1G: a4.5 b4.5 cs5.4_b4.4_a4.4
   P1.2F: a2/e3.7
 
-M2
+M2:
   P1.1G: cs5.4 Cs5.4 b4.4 b4.4 a4.6
   P2.2F: a2/e3.7
 ```
 
 The above shows a lot of useful details. The heading is `M1` to signify the first measure. `M2` would equally signify the second measure, `M3` the third measure, etc.
+- The first measure needs a time signature. The second and following measures don't need to write the time signature explicitly unless they're changing it.
+- If a measure has notes adding up to more than the allowed beats per measure should simply be discarded.
 
 The `P` blocks refer to the parts. They can be represented in decimal format, understood as the following:
 - The whole number portion refers to the instrument number.
