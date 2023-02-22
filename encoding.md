@@ -8,3 +8,6 @@ Observe the beginning of the score could look like this:
     #S: Score_Subtitle
     #A: Score_Author(s)
     #C: Score_Copyright
+
+This defines the most surface-level information about the score. It is efficient to write and makes sense when viewing (it makes sense that #T refers to the title of the score, #S refers to the subtitle, etc.).
+
