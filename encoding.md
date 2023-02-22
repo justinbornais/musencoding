@@ -48,9 +48,32 @@ The notes are represented in parts like this, each note separated by a space:
   - For dotted durations, such as a dotted quarter note, just write `5.` So a dotted quarter note of G in the fourth octave would be `g4.5.`
 - To have multiple notes in a chord, use a forward slash `/` before the duration.
   - Implementation of separate voices will be thought about later. Could potentially further break the part into voices.
+- If you have repeated notes (i.e. 4 `G4`'s in a row each with the same duration, simply add a number before the letter name. For example: 4 G4 quarter notes would look like `4g4.5`. For different durations (i.e. a quarter note followed by a half note), use multiple dots: `2g4.5.6`
+  - If the duration uses a dot, it will work the same. For example: 2 G4s, one a dotted half note, the other a quarter note, it would be `2g4.6..5`
 - To slur different notes, use an underscore instead of a space.
 
 ## Sample Encoding
 
 Here is the sample score also available in the repository:
 ![Sample Score](/sample.jpg?raw=true "Sample Score")
+
+The encoding of this score would look like this:
+```
+#T: Epic Song
+#S: What an Amazing Song
+#A: Justin Bornais
+#C: All Rights Reserved
+
+M1:4/4
+  P1.1G: c4.5 d4.5 e4.5 c4.5
+  P1.2F: c3/g3.7
+M2:
+  P1.1G: f4.5 g4.5 c4/g4.6
+  P1.2F: c3/f3.6 c3/e3.6
+M3:3/4
+  P1.1G: e4.4_d4.4_c4.5 c4.5
+  P1.2F: 3g3.5
+M4:4/4
+  P1.1G: c4/c5.7
+  P1.2F: c3.6 c2.6
+```
