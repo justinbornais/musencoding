@@ -49,3 +49,8 @@ The notes are represented in parts like this, each note separated by a space:
 - To have multiple notes in a chord, use a forward slash `/` before the duration.
   - Implementation of separate voices will be thought about later. Could potentially further break the part into voices.
 - To slur different notes, use an underscore instead of a space.
+
+## Sample Encoding
+
+Here is the sample score also available in the repository:
+![Sample Score](/sample.jpg?raw=true "Sample Score")
